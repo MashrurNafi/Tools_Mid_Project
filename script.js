@@ -60,11 +60,6 @@ document.getElementById("cartBtn").addEventListener("click", () => {
 
 function updateCartModal() {
   modal.showModal();
-
-  if (!window.couponApplied) {
-    discount = 0;
-  }
-
   discount = 0;
   delivery = subtotal > 0 ? 100 : 0;
   shipping = subtotal > 0 ? 50 : 0;
