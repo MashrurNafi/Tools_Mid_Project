@@ -1,59 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/cart.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>SmartShop</title>
+    <title>SmartShop</title>
 </head>
+
 <body>
-  <!-- Navbar Section -->
-   <section class="flex justify-around bg-black text-white p-6 w-full fixed top-0 z-50">
-        <div class="flex justify-around w-full">
+    <!-- Navbar Section -->
+    <section class="flex justify-around bg-transparent backdrop-blur-lg  p-6 w-full fixed top-0 z-50">
+        <div class="flex justify-around items-center w-full">
             <h1 class="font-bold text-4xl">SmartShop</h1>
             <nav>
-            <ul class="flex space-x-4 text-lg mt-3">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#aboutShop">About SmartShop</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+                <ul class="hidden md:flex space-x-10 text-lg mt-3">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#aboutShop">About SmartShop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-            <a class="text-2xl font-bold flex"><i class="fa-solid fa-cart-shopping"></i>
-            <div class="cart-quantity"></div></a>
+            <a class="relative text-2xl font-bold flex"><i class="fa-solid fa-cart-shopping"></i>
+                <div
+                    class=" absolute -top-2 -right-2 bg-red-400 text-white rounded-full w-4 h-4 flex justify-center items-center text-xs cart-quantity">
+                </div>
+            </a>
         </div>
-   </section>
+    </section>
 
-   <div class="mt-22">
+    <div class="mt-22">
 
         <!-- Hero Secttion -->
-    <section id="home">
-        <div class="flex">
-                <div>
-                    <img class="" src="./image/bg-2.jpg" alt="">
+        <section id="home">
+            <div class="carousel w-full">
+                <!-- slider 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="relative">
+                        <img src="./image/bg-2.jpg" class="w-full" />
+                        <div
+                            class="absolute left-0 top-0 w-full h-full  flex flex-col bg-black/30 justify-center items-center text-center text-white px-4">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Perfect Choice</h1>
+                            <p class="text-lg max-w-2xl mb-6">Quality products, unbeatable deals, and everything you
+                                love — all
+                                in one place.</p>
+                            <button
+                                class="bg-gradient-to-r from-[#FF6F3C] to-orange-500 text-white px-6 py-3 rounded-md font-semibold">Explore
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
                 </div>
-                <div>
-                    <img src="./image/bg-3.jpg" alt="">
+
+                <!-- slider 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="relative">
+                        <img src="./image/bg-3.jpg" class="w-full" />
+                        <div
+                            class="absolute left-0 top-0 w-full h-full  flex flex-col bg-black/30 justify-center items-center text-center text-white px-4">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Everything for Every Occasion</h1>
+                            <p class="text-lg max-w-2xl mb-6">Dress in style with our exclusive collection.</p>
+                            <button
+                                class="bg-gradient-to-r from-[#FF6F3C] to-orange-500 text-white px-6 py-3 rounded-md font-semibold">Explore
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
                 </div>
-                <div>
-                    <img src="./image/bg-4.jpg" alt="">
+
+                <!-- slider 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="relative">
+                        <img src="./image/bg-4.jpg" class="w-full" />
+                        <div
+                            class="absolute left-0 top-0 w-full h-full  flex flex-col bg-black/30 justify-center items-center text-center text-white px-4">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Perfect Style</h1>
+                            <p class="text-lg max-w-2xl mb-6">Discover products that match your taste and lifestyle.</p>
+                            <button
+                                class="bg-gradient-to-r from-[#FF6F3C] to-orange-500 text-white px-6 py-3 rounded-md font-semibold">Explore
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
                 </div>
-        </div>
+
+            </div>
         </section>
 
         <!-- Products Section -->
-        <section id="products">
-            <div class="productContainer grid grid-cols-5 gap-4 p-6 ml-20 justify-between">
+        <section id="products" class="py-20 max-w-7xl mx-auto px-8">
+            <h2 class="text-3xl  font-bold">Featured Section</h2>
+            <div class="productContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-between">
                 <!-- products will appear here -->
             </div>
         </section>
 
-         <!-- Reviews Section -->
-        <section id="reviews" class="py-20 bg-primary text-black text-center">
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-20 bg-[#1A1A40] text-white mt-10 text-center">
             <div class="max-w-6xl mx-auto px-8">
                 <h2 class="text-3xl font-bold mb-10">What Our Customers Say</h2>
                 <div class="grid md:grid-cols-3 gap-8">
@@ -74,7 +136,7 @@
         </section>
 
         <!-- About SmartShop Section -->
-        <section id="aboutShop" class="py-20 bg-gray-50">
+        <section id="aboutShop" class="pt-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-8 text-center">
                 <h2 class="text-3xl font-bold mb-4">About SmartShop</h2>
                 <p class="max-w-2xl mx-auto mb-10 text-gray-600">
@@ -85,7 +147,7 @@
 
                 <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
                     <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
-                        <i class="fa-solid fa-shield text-secondary text-3xl mb-3"></i>
+                        <i class="fa-solid fa-shield text-[#FF6F3C]  text-3xl mb-3"></i>
                         <h3 class="font-semibold text-xl mb-2">Secure & Trusted</h3>
                         <p class="text-gray-600">
                             All products are verified to ensure quality and reliability.
@@ -93,7 +155,7 @@
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
-                        <i class="fa-solid fa-dollar-sign text-secondary text-3xl mb-3"></i>
+                        <i class="fa-solid fa-dollar-sign text-[#FF6F3C]  text-3xl mb-3"></i>
                         <h3 class="font-semibold text-xl mb-2">Best Prices</h3>
                         <p class="text-gray-600">
                             Enjoy competitive pricing and exciting deals on every purchase.
@@ -101,7 +163,7 @@
                     </div>
 
                     <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
-                        <i class="fa-solid fa-clock text-secondary text-3xl mb-3"></i>
+                        <i class="fa-solid fa-clock text-[#FF6F3C] text-3xl mb-3"></i>
                         <h3 class="font-semibold text-xl mb-2">24/7 Support</h3>
                         <p class="text-gray-600">
                             Our support team is always ready to assist you with any queries.
@@ -112,7 +174,7 @@
         </section>
 
         <!-- About Us Section -->
-            <section id="about" class="py-20 bg-gray-50">
+        <section id="about" class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-6 text-center">
                 <!-- Title -->
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">About Us</h2>
@@ -154,7 +216,7 @@
             </div>
         </section>
 
-            <!-- Contact Section -->
+        <!-- Contact Section -->
         <section id="contact" class="pb-20 pt-10 bg-gray-50">
             <div class="max-w-lg mx-auto text-center px-6">
                 <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
@@ -165,7 +227,7 @@
                         required />
                     <textarea placeholder="Your Message"
                         class="border border-gray-300 rounded-md px-4 py-2 h-32 resize-none" required></textarea>
-                    <button type="submit" class="bg-secondary text-white px-6 py-3 rounded-md font-semibold">
+                    <button type="submit" class="bg-[#FF6F3C] text-white px-6 py-3 rounded-md font-semibold">
                         Send Message
                     </button>
                 </form>
@@ -177,15 +239,15 @@
             <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8 px-8 text-sm">
                 <!-- Brand -->
                 <div>
-                    <h3 class="text-2xl font-bold text-primary mb-4">SmartShop</h3>
+                    <h3 class="text-2xl font-bold text-[#1A1A40] mb-4">SmartShop</h3>
                     <p>Chittagong, Bangladesh</p>
                     <p class="mt-2">contact@company.com</p>
                     <p class="mt-1">+001 2233 456</p>
                     <div class="flex space-x-4 mt-4 text-lg">
-                        <i class="fa-brands fa-facebook hover:text-secondary"></i>
-                        <i class="fa-brands fa-twitter hover:text-secondary"></i>
-                        <i class="fa-brands fa-instagram hover:text-secondary"></i>
-                        <i class="fa-brands fa-linkedin hover:text-secondary"></i>
+                        <i class="fa-brands fa-facebook hover: "></i>
+                        <i class="fa-brands fa-twitter hover: "></i>
+                        <i class="fa-brands fa-instagram hover: "></i>
+                        <i class="fa-brands fa-linkedin hover: "></i>
                     </div>
                 </div>
 
@@ -232,7 +294,7 @@
                     <div class="flex">
                         <input type="email" placeholder="Your email address"
                             class="border border-gray-300 px-3 py-2 w-full rounded-l-md" />
-                        <button class="bg-gradient-to-r from-secondary to-orange-500 text-white px-4 py-2 rounded-r-md">
+                        <button class="bg-gradient-to-r from-[#FF6F3C] to-orange-500 text-white px-4 py-2 rounded-r-md">
                             Subscribe
                         </button>
                     </div>
@@ -240,13 +302,14 @@
             </div>
             <div class="border-t mt-10 pt-6 text-center text-gray-500 text-sm">
                 © 2025 Rentify. All rights reserved. Powered by
-                <span class="text-secondary font-semibold">SmartShop</span>.
+                <span class="  font-semibold">SmartShop</span>.
             </div>
         </footer>
-   </div>
+    </div>
 
 
 
-   <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
