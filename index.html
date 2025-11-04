@@ -30,7 +30,6 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
-
                 </ul>
             </nav>
             <a id="cartBtn" onclick="my_modal_1.showModal()" class="relative text-2xl font-bold flex cursor-pointer">
@@ -309,13 +308,13 @@
 
         <!-- Footer -->
         <footer id="faq" class="bg-gray-100 pt-16 pb-8 text-gray-700">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8 px-8 text-sm">
+            <div class=" max-w-7xl mx-auto grid md:grid-cols-5 gap-8 px-8 text-sm">
                 <!-- Brand -->
                 <div>
                     <h3 class="text-2xl font-bold text-[#1A1A40] mb-4">SmartShop</h3>
                     <p>Chittagong, Bangladesh</p>
-                    <p class="mt-2">contact@company.com</p>
-                    <p class="mt-1">+001 2233 456</p>
+                    <p class="mt-2">masadnafi@company.com</p>
+                    <p class="mt-1">+8801709341256</p>
                     <div class="flex space-x-4 mt-4 text-lg">
                         <i class="fa-brands fa-facebook hover: "></i>
                         <i class="fa-brands fa-twitter hover: "></i>
@@ -352,9 +351,14 @@
                 <div>
                     <h4 class="font-semibold mb-3">Useful Links</h4>
                     <ul class="space-y-2">
-                        <li>Store Location</li>
-                        <li>My Account</li>
-                        <li>FAQs</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#aboutShop">About SmartShop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+
                     </ul>
                 </div>
 
@@ -373,15 +377,20 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t mt-10 pt-6 text-center text-gray-500 text-sm">
+            <div class="relative border-t mt-10 pt-6 text-center text-gray-500 text-sm">
                 © 2025 Rentify. All rights reserved. Powered by
                 <span class="  font-semibold">SmartShop</span>.
+                <button class="absolute top-1 z-50 right-5 px-5 py-3 bg-[#FF6F3C] rounded-2xl text-white">
+                    <a href="#home">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </button>
             </div>
         </footer>
     </div>
 
     <dialog id="my_modal_1" class="modal">
-        <div class="modal-box">           
+        <div class="modal-box">
             <div>
                 Balance: <span id="total-amount"></span>
             </div>
